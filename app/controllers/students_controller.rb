@@ -17,7 +17,7 @@ class StudentsController < ApplicationController
 
   # GET /students/1/edit
   def edit
-    @score = Score.find(params[:id])
+
   end
 
   # POST /students or /students.json
@@ -56,6 +56,10 @@ class StudentsController < ApplicationController
       format.html { redirect_to students_url, notice: "Student was successfully destroyed." }
       format.json { head :no_content }
     end
+  end
+
+  def edit_score
+    @score= Score.find(params[:id])
   end
 
 
